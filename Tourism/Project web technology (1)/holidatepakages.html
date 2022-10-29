@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<HTML>
+<head>
+	<meta charset="UTF-8">
+	<script src="js/jquery-3.4.1.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<link rel="stylesheet" type="text/CSS" href="CSS/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="css/styles6.css">
+	<script>
+		$(document).ready(function(){
+			
+			$( "#currency" ).on( "change", function() {
+			$( "#spinner" ).spinner( "option", "culture", $( this ).val() );
+			});
+			$( "#spinner3" ).spinner({
+			min: 5,
+			max: 2500,
+			step: 5,
+			start: 1000,
+			numberFormat: "C"
+			});
+			$("#btn5").click(function(){
+				$("#effect").hide("blind",{direction:"vertical"},3000);
+			
+			});
+		});
+	</script>
+</head>
+<body>
+<header>
+	<div class="main">
+		<div class="logo">
+			<img src="images/logo.png">
+		</div>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="destinations.html">Destinations</a></li>
+			<li><a href="#">Flight Bookings</a></li>
+			<li><a href="#">Hotel Bookings</a></li>
+			<li class="active"><a href="#">Holiday Packages</a></li>
+			<li><a href="#">Cab Bookings</a></li>
+			<li><a href="#">Travel Blog</a></li>
+			<li><a href="#">Sign Up</a></li>
+			<li><a href="aboutus.html">About Us</a></li>
+		</ul>
+	</div>
+	<div class="title">
+		<h1>India Tourism</h1>
+	</div>
+		<form>
+		<h3>Booking For Holidays</h3>
+			<p>
+			  <label for="spinner">Select Destination:</label>
+			  <input id="spinner" name="value">
+			</p><br>
+			
+			<p>
+			  <label for="spinner">Select Days:</label>
+			  <input id="spinner2" name="value">
+			</p><br>
+			
+			<p>
+			  <label for="spinner">Amount:</label>
+			  <input id="spinner3" name="spinner" value="5">
+			</p><br>
+					
+			<p>
+			  <label for="currency">Currency:</label>
+			  <select id="currency" name="currency">
+				<option value="en-US">US $</option>
+				<option value="de-DE">EUR €</option>
+				<option value="ja-JP">YEN ¥</option>
+			  </select>
+			</p><br>
+			
+			
+			<div>
+			  <input type="submit" value="Submit">
+			</div>
+		</form><br>
+		
+		<form>
+		
+		<button id="btn5">Trending Holiday Places</button>
+		<div id="hide">
+			<div id="effect">
+			<p>In India, there are various famous places where many people wants to go and spend their holidays.</p>
+				<ol>
+					<li>Massoorie</li>
+					<li>Rishikesh</li>
+					<li>Dalhousie</li>
+					<li>Bangalore</li>
+					<li>Goa</li>
+				</ol>
+			</div>
+		</div>
+		</form><br>
+
+	<Footer>
+		<hr>
+		    <h2 id="h2">Follow us on</h2>
+			<!-- Below are external links -->
+		    <button id="buttonone"><a href="https://www.facebook.com" > FACEBOOK</a></button>
+		    <button id="buttontwo"><a href="https://www.instagram.com" >INSTAGRAM </a></button>
+		    <button id="buttonthree"><a href="https://www.Twitter.com" >TWITTER </a></button>
+			
+			
+			 <div id="h3">
+			    <h3 >Support and Feedback </h3>
+                <p>  You can send feedback and get support via email <br>
+				<!-- <br> is used to break the line and move to the next line-->
+			    from the setting of our apps which provide us the version of <br>
+			    the app that you are using.<br>
+                email: support@Trenders.com <p>
+			</div>
+			<div id="h4">
+			    <h3 id="h3-1"> Website Creators </h3>
+                <p id="p2"> 1. Tejbir Singh---programmer <br>
+				2. Sumrit Sharma---web designer <br>
+				3.Jaspreet Kaur---TECHNICAL support  <br> 
+				</p>
+			</div>
+			<div id="h5">
+			    <h3 id="h3-2"> Find us on </h3>
+				<!-- these are also external links to google maps and google earth -->
+                <a id="a2" href="https://www.google.ca/maps"> Google Maps </a><br>
+                <a id="a3" href="https://www.google.com/earth"> Google Earth </a>
+			</div>
+			
+	</footer>
+		
+				
+</header>
+</body>
+</HTML>

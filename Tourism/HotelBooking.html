@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Travelism</title>
+	<META charset="UTF-8">
+	<script src="js/jquery-3.4.1.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/jquery-labelauty.js"></script>
+	<script src="js/validetta.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style7.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery-labelauty.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="css/validetta.css">
+
+
+<script>
+	$(document).ready(function(){
+		$(":checkbox").labelauty();
+		$(":radio").labelauty();
+		$("#Cidate").datepicker();
+		$("#Codate").datepicker();
+		$("form").validetta({
+				  onValid : function( event ) {
+					event.preventDefault(); // Will prevent the submission of the form
+					( 'Nice, Form is valid.' );
+				  },
+				  onError : function( event ){
+					( 'Stop Ashrafar !! There are some errors.');
+				  }
+		});
+		
+	$( "#b1" ).click(function() {
+			$( "#div1" ).toggle( "fold", 1000 );
+			$("#b1").text("open the offer");
+			
+		});
+		
+	});
+</script>
+	
+</head>
+<body>
+	<header>
+		<div class="main">
+			<div class="logo">
+				<img src="images/logo.png">
+			</div>
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li><a href="destinations.html">Destinations</a></li>
+				<li><a href="flights.html">Flight Bookings</a></li>
+				<li class="active"><a href="HotelBooking.html">Hotel Bookings</a></li>
+				<li><a href="holidatepakages.html">Holiday Packages</a></li>
+				<li><a href="cabs.html">Cab Bookings</a></li>
+				<li><a href="Travelblog.html">Travel Blog</a></li>
+				<li><a href="signup.html">Sign Up</a></li>
+				<li><a href="aboutus.html">About Us</a></li>
+			</ul>
+		
+		
+		</div>
+		<div class="title">
+			<h1>Travel Time</h1>
+		
+		</div>
+		
+	</header>
+	
+<main>
+<h1>Hotel Booking Form</h1>
+
+	<form>
+			<div>
+			<label for="name">Enter your Full name:  </label>
+		     <input type="text" id="name" value="" data-validetta="required">
+			</div>
+		
+			<div>
+			<label for="phone">Enter your number :  </label>
+		     <input type="number" id="phone" value="" data-validetta="required">
+			</div>
+		
+			<div>
+			<label for="pwd">Enter your password: </label>
+		     <input type="password" id="pwd" value="" data-validetta="required">
+			</div>
+			
+			<div>
+			<label for="Cname">Enter the City Name: </label>
+		     <input type="text" id="Cname" pattern="[a-zA-Z]*" value="" data-validetta="required">
+			</div>
+			
+			<div>
+		     <label for="Cidate">Check in: </label>
+		     <input type="datetime" id="Cidate"  value="" data-validetta="required">
+			</div>
+			
+			<div>
+			 <label for="Codate">Check out: </label>
+		     <input type="datetime" id="Codate" value="" data-validetta="required">
+			</div>
+		
+			<fieldset style="Border:0;">
+				<label for="rooms">Rooms: </label><br>
+				<select name="rooms" id="rooms">
+				  <option>2 guests /1 room</option>
+				  <option>3 guests /1 master room</option>
+				  <option selected="selected">4 guests/ 2 rooms</option>
+				  <option>6 guests/ 4 rooms</option>
+				  <option>8 guests/ 4 rooms</option>
+				</select>
+			</fieldset>
+			<br>
+			
+			<label>Extra Utilities:</label> <br>
+			<input type="checkbox"  data-labelauty="No access to swimming pool|Full access to swimming pool"/>
+			<input type="checkbox" data-labelauty="No access to the gym.|Full access to the gym."/><br><br>
+			
+
+			<label for="pickup">Free pickup: </label><br>
+			<input type="radio" name="radio-input" data-labelauty="no Thanks|yes please"/><br><br><br>
+			
+			<input id="button" type="Submit" value="Submit">
+				
+		</form>
+		
+<div id="div2">
+	<div id="div1"><b>Up to 25% Off* on Flights, Hotels, Bus, Experiences & Trains
+				Amazon Pay Exclusive Offer
+				This offer is only valid from 6th - 8th December 2019 (both days included) between 0000 hours to 2359 hours.</b></div>
+	<button id="b1">Close the offer</button>
+</div>
+		
+</main>
+
+
+<div id="image1">
+				   
+				     <h3 id="cat">Popular hotels<h3>
+		   
+			<!-- Table is used here to add images inline -->	
+			<table>
+				<tr>
+					<td style="width:30%;height:25%;">
+						<!-- 'figure' is used to give caption under image -->
+						<figure>
+							<img id="ca1" src="images/image1.jpg" alt="image">
+							<figcaption class="fig"><b>Hotel Mint Highstreet <br>INR 1,627 per night</b></figcaption>
+						</figure>
+					</td>
+					<td style="width:30%;height:25%;">
+						<figure>			
+							<img id="ca2" src="images/image2.jpg" alt="image">
+							<figcaption class="fig"><b>Vila Ikebana <br>INR 1,422 per night</b></figcaption>		
+						</figure>
+					</td>
+					<td style="width:30%;height:25%;">					
+						<figure>				
+							<img id="ca3" src="images/image3.jpg" alt="image">
+							<figcaption class="fig"><b>Casa Arvona Goa <br>INR 899 per night</b></figcaption>	  
+						</figure>
+					</td>			
+				</tr>
+				<tr>
+					<td style="width:30%;height:25%;">
+						<figure>
+							<img id="ca4" src="images/image4.jpg" alt="image">
+							<figcaption class="fig"><b>Laliguras Villa <br>INR 2,180 per night</b></figcaption>
+						</figure>
+					</td>
+					<td style="width:30%;height:25%;">
+						<figure>			
+							<img id="ca5" src="images/image5.jpg" alt="image">
+							<figcaption class="fig"><b>Dew Drop <br>INR 1,850 per night</b></figcaption>		
+						</figure>
+					</td>
+					<td style="width:30%;height:25%;">					
+						<figure>				
+							<img id="ca6" src="images/image6.jpg" alt="image">
+							<figcaption class="fig"><b>Marcello Villa in Baga <br>INR 1,140 per night</b></figcaption>	  
+						</figure>
+					</td>			
+				</tr>
+			</table>
+
+
+
+</div>
+
+<Footer>
+		<hr>
+		    <h2 id="h2">Follow us on</h2>
+			<!-- Below are external links -->
+		    <button id="buttonone"><a href="https://www.facebook.com" > FACEBOOK</a></button>
+		    <button id="buttontwo"><a href="https://www.instagram.com" >INSTAGRAM </a></button>
+		    <button id="buttonthree"><a href="https://www.Twitter.com" >TWITTER </a></button>
+			
+			
+			 <div id="h3">
+			    <h3 >Support and Feedback </h3>
+                <p>  You can send feedback and get support via email <br>
+				<!-- <br> is used to break the line and move to the next line-->
+			    from the setting of our apps which provide us the version of <br>
+			    the app that you are using.<br>
+                email: support@Trenders.com <p>
+			</div>
+			<div id="h4">
+			    <h3 id="h3-1"> Website Creators </h3>
+                <p id="p2"> 1. Tejbir Singh---programmer <br>
+				2. Sumrit Sharma---web designer <br>
+				3.Jaspreet Kaur---TECHNICAL support  <br> 
+				</p>
+			</div>
+			<div id="h5">
+			    <h3 id="h3-2"> Find us on </h3>
+				<!-- these are also external links to google maps and google earth -->
+                <a id="a2" href="https://www.google.ca/maps"> Google Maps </a><br>
+                <a id="a3" href="https://www.google.com/earth"> Google Earth </a>
+			</div>
+			
+</footer>
+
+</body>
+</html>

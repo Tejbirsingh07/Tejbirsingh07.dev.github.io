@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="js/jquery-3.4.1.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/roundslider.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="css/styles5.css">
+	<link rel="stylesheet" type="text/css" href="css/roundslider.css">
+	<script>
+		$(document).ready(function(){
+			$( "#tabs" ).tabs({
+			event: "mouseover"
+			});
+				$( "#btn3" ).click(function() {
+				$( "#info" ).addClass( "newClass", 1000, callback );
+				});
+ 
+			function callback() {
+				setTimeout(function() {
+				$( "#info" ).removeClass( "newClass" );
+				}, 1500 );
+			}
+			$("#slider").roundSlider({
+				radius: 85,
+				sliderType: "min-range",
+				value: 40
+			});	
+		});
+	</script>
+</head>
+<body>
+<header>
+	<div class="main">
+			<div class="logo">
+				<img src="images/logo.png">
+			</div>
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li><a href="destinations.html">Destinations</a></li>
+				<li><a href="flights.html">Flight Bookings</a></li>
+				<li><a href="HotelBooking.html">Hotel Bookings</a></li>
+				<li><a href="holidatepakages.html">Holiday Packages</a></li>
+				<li><a href="cabs.html">Cab Bookings</a></li>
+				<li><a href="Travelblog.html">Travel Blog</a></li>
+				<li><a href="signup.html">Sign Up</a></li>
+				<li class="active"><a href="aboutus.html">About Us</a></li>
+			</ul>
+		</div>
+			<div class="title">
+				<h1>India Tourism</h1>
+			</div>
+		<div id="tabs">
+			<ol>
+				<li><a href="#tabs-1">Information</a></li>
+				<li><a href="#tabs-2">Contact Us</a></li>
+				<li><a href="#tabs-3">Visa Policy</a></li>
+				<li><a href="#tabs-4">User Agreement</a></li>
+				<li><a href="#tabs-5">Payment Security</a></li>
+			</ol>
+		<div id="tabs-1">
+			<p>Our Company is Working since 2005. We are dealing with other 
+				Companies as well. Our company provide you proper information 
+				about your trip and also help you in hotel bookings, cabs to pick
+				up you from your location. We also provide some Gift cards to our 
+				honest and old customers. </p>
+		</div>
+		<div id="tabs-2">
+			<p>Here are Our Company number ans Email Address so that you can contact us:</p>
+			<p>Tel-Phone Number: 132xxxx</p>
+			<p>Company Number: 0088-999-xxx</p>
+			<p>Email Address:Indiatourism@org</p>
+			<p>you can also give us Message on our Tel-Phone Number.</p>
+		</div>
+		<div id="tabs-3">
+			<p>Our Visa Policy is Very easy and you get your visa in few days. its really easy process
+			and you do not feel any truble when you will apply from it. you can apply through our site 
+			or if you want then you can also vist our office to apply your visa and conformation.</p>
+		</div>
+		<div id="tabs-4">
+			<ol>
+				<li>User's Responsibility</li>
+				<li>Insurance</li>
+			</ol>
+				<label>User's Responsibility:</label><br>
+				<p>Users are advised to check the description of the services 
+				and products carefully before making a booking. User(s) agree to be bound by all the 
+				conditions as contained in booking confirmation or as laid out in the confirmed booking 
+				voucher. These conditions are also to be read in consonance with the User Agreement.
+				</p>
+				
+				<label>Insurance:</label><br>
+				<p>International bookings made through IT are subject to the requirements of visa
+				including but not limited to transit visa, OK TO BOARD which are to be obtained by
+				the User as per the requirement of their travel bookings and the requirements of 
+				the countries the User intends to visit or transit through.
+				</p>
+				
+		</div>
+		<div id="tabs-5">
+			<p>IndiaTourism.com ensures that every transaction you conduct online is in a safe and 
+				secure environment. To achieve this, IndiaTourism.com is protected by Secured Socket 
+				Layer (SSL) technology by VeriSign, the leaders in encryption technology. The process
+				of encryption takes your credit card information and converts it into bits of code that 
+				are securely transmitted over the Internet. This scrambled data cannot be read as the 
+				information travels over the Internet. Your credit card details may be shared with our 
+				service providers or vendors to the extent deemed to be necessary.
+
+				If you are more comfortable with giving your credit card information over the phone, you 
+				can call our Customer Service Centre on Toll Free 1-800-11 8747 (BSNL & MTNL phones) and 
+				1-800-102 8747 (Airtel Subscribers).
+
+				If you have any additional queries or concerns please email us and we will reply within 24 hours.</p>
+		</div>
+	</div></br>
+		<button id="btn3">More Information</button>
+			<div id="info">
+			<p>if you need any kind of help whether it is during your process of tickets or during your trip, we 
+			are always here to help you. As we mentioned our email and phone number above, so you can call us or email 
+			us, whatever you preffer. we have very good staf for your service and we always take care of our customers.
+			As I already told you it is an old agency and we are working since so many years so we have good experince to 
+			help and handel our custers. you never feel uncomfortable with us. Every type of things we provide.
+			Hope you will enjoy it!
+			</p>
+			</div>
+			<br>
+	<div id="slider">
+		
+	</div>
+	<p align="center"><b> Give our website a rating out of 100.</b></p>
+</header>		
+</body>
+</html>
+

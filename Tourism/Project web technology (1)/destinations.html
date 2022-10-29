@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<HTML>
+<head>
+	<meta charset="UTF-8">
+	<script src="js/jquery-3.4.1.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/validatr.js"></script>
+	<script src="js/lightbox.js"></script>
+	<link rel="stylesheet" type="text/CSS" href="CSS/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="css/styles4.css">
+	<link rel="stylesheet" type="text/css" href="css/lightbox.css">
+	<script>
+		$(document).ready(function(){
+			$("#effect").hide();
+			$("#effects").hide();
+			$( "#accordion" ).accordion({
+				collapsible:true
+			});
+			$("#btn1").click(function() {
+				$("#effect").show("highlight", 3000, callback);
+			});
+			function callback() {
+			setTimeout(function() {
+			$( "#effect:visible" ).removeAttr( "style" ).fadeOut();
+			},5000 );
+			};
+			$("#btn2").click(function() {
+				$("#effects").show("highlight", 3000, callback);
+			});
+			function callback() {
+			setTimeout(function() {
+			$( "#effects:visible" ).removeAttr( "style" ).fadeOut();
+			},5000 );
+			};			
+			$('form').validatr();
+		});
+	</script>
+</head>
+<body>
+<header>
+	<div class="main">
+		<div class="logo">
+			<img src="images/logo.png">
+		</div>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li class="active"><a href="#">Destinations</a></li>
+			<li><a href="#">Flight Bookings</a></li>
+			<li><a href="#">Hotel Bookings</a></li>
+			<li><a href="holidatepakages.html">Holiday Packages</a></li>
+			<li><a href="#">Cab Bookings</a></li>
+			<li><a href="#">Travel Blog</a></li>
+			<li><a href="#">Sign Up</a></li>
+			<li><a href="aboutus.html">About Us</a></li>
+		</ul>
+	</div>
+	<div class="title">
+		<h1>India Tourism</h1>
+	</div>
+	<div id="accordion">
+	<h3>North India</h3>
+		<div>
+		<p>
+		<table>
+			<tr>
+				<td><a href="images/A1.jpg" data-lightbox="roadtrip"><img src="images/A1.jpg"><br>Delhi</a></td>
+				<td><a href="images/A2.jpg" data-lightbox="roadtrip"><img src="images/A2.jpg"><br>Agra</td>
+				<td><a href="images/A3.jpg" data-lightbox="roadtrip"><img src="images/A3.jpg"><br>Punjab</td>
+			</tr>
+			<tr>
+				<td><a href="images/A4.jpg" data-lightbox="roadtrip"><img src="images/A4.jpg"><br>India Gate</td>
+				<td><a href="images/A5.jpg" data-lightbox="roadtrip"><img src="images/A5.jpg"><br>Rishikesh</td>
+				<td><a href="images/A6.jpg" data-lightbox="roadtrip"><img src="images/A6.jpg"><br>Massoorie</td>
+			</tr>
+			<tr>
+				<td><a href="images/A7.jpg" data-lightbox="roadtrip"><img src="images/A7.jpg"><br>Dalhousie</td>			
+		</table>
+		</p>
+		</div>
+	<h3>South India</h3>
+		<div>
+		<p>
+		<table>
+			<tr>
+				<td><a href="images/B1.jpg" data-lightbox="roadtrip"><img src="images/B1.jpg"><br>Tamil Nadu</td>
+				<td><a href="images/B2.jpg" data-lightbox="roadtrip"><img src="images/B2.jpg"><br>Ooty</td>
+				<td><a href="images/B3.jpg" data-lightbox="roadtrip"><img src="images/B3.jpg"><br>Pondicherry</td>
+			</tr>
+			<tr>
+				<td><a href="images/B4.jpg" data-lightbox="roadtrip"><img src="images/B4.jpg"><br>Kanyakumari</td>
+				<td><a href="images/B5.jpg" data-lightbox="roadtrip"><img src="images/B5.jpg"><br>Goa</td>
+				<td><a href="images/B6.jpg" data-lightbox="roadtrip"><img src="images/B6.jpg"><br>Bangalore</td>
+			</tr>
+			<tr>
+				<td><a href="images/B7.jpg" data-lightbox="roadtrip"><img src="images/B7.jpg"><br>Tirupati</td>			
+		</table>
+		</p>
+		</div>
+	</div>
+			<input type="Button" id="btn1" value="North India"/>
+	<div id="effect">
+		<p>Geographical Features of North India
+			Himalayan mountain ranges bound India from North to East with territorial borders with 
+			Pakistan in North and with China, Myanmar ( Burma) and Bangladesh in North-East.
+			Arabian Sea in the West and Bay of Bengal in the East makes it a geographical triangle 
+			ending at Southern tip in Indian Ocean with a total coastline of 7,000 sp.km. Its total Area is 3,287,263 sq km.
+
+			However, North India constitutes Northern Himalayas and Indo-Gangetic plains only.
+			North India is a gateway to Deccan (South) and deserts in west. Climate of North 
+			India is temperate in contrast to tropical monsoon in the south.
+		</p>
+	</div>&nbsp;
+			<input type="Button" id="btn2" value="South India"/>
+	<div id= "effects">
+		<p>The southern part of India called South India, covering states of Andhra Pardesh, Karnataka, 
+			Kerala and Tamil Nadu. The region of South India also known as Dravida as is used in National 
+			Anthem of India. A majority of South Indians speaks Dravidian language: Kannada, Malayalam, 
+			Tamil and Telugu. Other languages speaks in South India is English and Hindi.
+
+			Apart from the English name South India, southern part of India has been known by several other 
+			historical names. Adi Shankara invented the name Dravida in 8th century as he called himself 
+			Dravida Shishu (Dravida Child) means Child of South India. The term Deccan, and Anglicized from 
+			of the word Dakshina meaning south refers only the area covered by Deccan Plateau. The Deccan 
+			Plateau is a volcanic plateau that covers most of peninsular India excluding the costal area.</p>
+	</div><br>
+		
+	<form>
+		<h3>Place Booking</h3>
+			<label for="Destination Name">Destination Name:</label>
+			<input type="Destination" id="Destination" name="Destination" required><br>
+			
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" required><br>
+			
+			<label for="Phone Number">Phone Number:</label>
+			<input type="Phone" id="Phone" name="Phone"><br>
+		<div>
+			<input type="reset" class="btn" value="Reset">
+			<input type="submit" value="Submit">
+		</div>
+		
+	</form><br>
+	<Footer>
+		<hr>
+		    <h2 id="h2">Follow us on</h2>
+			<!-- Below are external links -->
+		    <button id="buttonone"><a href="https://www.facebook.com" > FACEBOOK</a></button>
+		    <button id="buttontwo"><a href="https://www.instagram.com" >INSTAGRAM </a></button>
+		    <button id="buttonthree"><a href="https://www.Twitter.com" >TWITTER </a></button>
+			
+			
+			 <div id="h3">
+			    <h3 >Support and Feedback </h3>
+                <p>  You can send feedback and get support via email <br>
+				<!-- <br> is used to break the line and move to the next line-->
+			    from the setting of our apps which provide us the version of <br>
+			    the app that you are using.<br>
+                email: support@Trenders.com <p>
+			</div>
+			<div id="h4">
+			    <h3 id="h3-1"> Website Creators </h3>
+                <p id="p2"> 1. Tejbir Singh---programmer <br>
+				2. Sumrit Sharma---web designer <br>
+				3.Jaspreet Kaur---TECHNICAL support  <br> 
+				</p>
+			</div>
+			<div id="h5">
+			    <h3 id="h3-2"> Find us on </h3>
+				<!-- these are also external links to google maps and google earth -->
+                <a id="a2" href="https://www.google.ca/maps"> Google Maps </a><br>
+                <a id="a3" href="https://www.google.com/earth"> Google Earth </a>
+			</div>
+			
+	</footer>
+		
+				
+</header>
+</body>
+</HTML>

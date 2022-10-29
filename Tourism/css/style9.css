@@ -1,0 +1,179 @@
+*{
+	margin:0;
+	padding:0;
+	font-family: Century Gothic;
+}
+
+body{
+	background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../images/background.jpg);
+	height: 100vh;
+	background-size:cover;
+	background-position:center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+ul{
+	float:right;
+	list-style-type:none;
+	margin-top:25px;
+}
+
+ul li{
+	display:inline-block;
+}
+
+ul li a{
+	text-decoration:none;
+	color: #fff;
+	padding:5px 20px;
+	border: 1px solid transparent;
+	transition: 0.6s ease;
+		
+}
+
+ul li a:hover{
+			background-color: #fff;
+			color: black;
+}
+
+ul li.active a{
+	background-color: #fff;
+			color: black;
+}
+.logo img{
+	float:left;
+	width:100px;
+	height:100px;
+}
+
+.main{
+	max-width: 1350px;
+	margin:auto;
+	
+}
+
+.title{
+	position:absolute;
+	top:20%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+
+.title h1{
+	color: #fff;
+	font-size:70px;
+}
+main h1 {
+	color: #fff;
+}
+
+
+main{
+	position:absolute;
+	top:35%;
+	left:23%;
+	border:1px solid white;
+	height:auto;
+}
+
+
+
+.toggler { width: 500px; height: 200px; position: relative; left:35%; }
+#button { padding: .5em 1em; text-decoration: none; }
+#effect { width: 240px; height: 170px; padding: 0.4em; position: relative; background: #fff; }
+#effect h3 { margin: 0; padding: 0.4em; text-align: center; }
+  
+
+#div11{
+	position:absolute;
+	top:130%;
+	left:10%;
+	right:10%;
+	text-indent: 50px;
+	text-align: justify;
+	color:white;
+	font-size:25px;
+}
+
+
+
+#h2{
+	margin-top:180%;
+	margin-left:45%;
+	
+}
+
+#buttonone{background-color: white;
+	border: none;
+	font-size: 15px;
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 40px;
+	width: 150px;
+	font-family: 'Montserrat', sans-serif;
+	margin-left:35%;
+	border: 3px solid white;
+}
+
+#buttontwo{
+    background-color: transparent;
+	border: none;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	line-height: 40px;
+	border: 3px solid white;
+	width: 150px;
+	font-size:15px;
+}
+
+#buttonthree{
+	background-color: white;
+	border: none;
+	font-size: 15px;
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 40px;
+	width: 150px;
+	font-family: 'Montserrat', sans-serif;
+	margin-top: 25px;
+	border: 3px solid white;
+}
+
+
+footer button a:link{color:black}
+footer button a:visited{color:blue}
+footer button a:hover{color:orange}
+footer button a:active{color:red}
+footer button a{ text-decoration: none;}
+
+#h3{
+	margin-left:3%;
+	margin-top:5%;
+	color:white;
+	font-size:20px;
+}
+
+#h4{
+	margin-left:45%;
+	margin-top:-8%;
+	color:white;
+	font-size:20px;
+}
+
+#h5{
+	margin-left:80%;
+	margin-top:-6%;
+	color:white;
+	font-size:20px;
+	
+}
+
+#h5 a:link{color:white;}
+#h5 a:visited{color:blue}
+#h5 a:hover{color:orange}
+#h5 a:active{color:red}
+
+#h5 a{ text-decoration: none;}
+	

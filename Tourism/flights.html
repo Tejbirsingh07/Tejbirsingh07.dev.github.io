@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<HTML>
+<head>
+ <script src="js/jquery-3.4.1.js"></script>
+ <script src="js/jquery-ui.js"></script>
+ <script src="js/jquery.simple.timer.js"></script>
+ <link rel="stylesheet" type="text/css"href="css/jquery-ui.css">
+ <link rel="stylesheet" type="text/css"href="css/styles2.css">
+ <script>
+	$(document).ready(function(){
+		$("#dialog").hide();
+		$("#travelclass").selectmenu();
+		$("#departuredate").datepicker({
+			showButtonPanel: true
+		});
+		$("#returndate").datepicker({
+			showButtonPanel: true
+		});
+		$("#btn1").button();
+		$("#btn1").click(function(){
+			$("#dialog").dialog({
+			  resizable: false,
+			  height: "auto",
+			  width: 300,
+			  modal: true,
+			  buttons: {
+				"Redeem this offer!": function() {
+				  $( this ).dialog( "close" );
+				},
+				Cancel: function() {
+				  $( this ).dialog( "close" );
+				}
+			  }
+			});	
+		});
+		$("#btn2").button();
+		$("#btn2").click(function(){
+			$( ".newClass" ).switchClass( "newClass", "anotherNewClass", 1000 );
+			$( ".anotherNewClass" ).switchClass( "anotherNewClass", "newClass", 1000 );
+		});
+		$('.timer').startTimer({
+		  onComplete:function(element){
+			$(alert("Your session has expired!"));
+		  }
+		});
+
+	});
+ </script>
+</head>
+<body>
+	<main>
+		<div class="main">
+			<div class="logo">
+				<img src="images/logo.png">
+			</div>
+			<ul class="unordered">
+				<li><a href="home.html">Home</a></li>
+				<li><a href="destinations.html">Destinations</a></li>
+				<li class="active"><a href="flights.html">Flight Bookings</a></li>
+				<li><a href="HotelBooking.html">Hotel Bookings</a></li>
+				<li><a href="holidatepakages.html">Holiday Packages</a></li>
+				<li><a href="cabs.html">Cab Bookings</a></li>
+				<li><a href="Travelblog.html">Travel Blog</a></li>
+				<li><a href="signup.html">Sign Up</a></li>
+				<li><a href="aboutus.html">About Us</a></li>
+			</ul>
+		</div>
+		<div class="title">
+			<h1>India Tourism</h1>
+		</div>
+		<h1><center><font color="White">Flights Booking Form</font></center></h1>
+		<form>
+			<div>
+				<label for="city">From:</label>
+		    	<input type="text" id="city" value="">
+			</div>
+			<div>
+				<label for="destination">To:</label>
+		    	<input type="text" id="destination" value="">
+			</div>
+			<div>
+		    	<label for="departuredate">Departure Date:  </label>
+		    	<input type="datetime" id="departuredate" value="">
+			</div>
+			<div>
+		    	<label for="returndate">Return Date:  </label>
+		    	<input type="datetime" id="returndate" value="">
+			</div>
+			<div>
+				<label for="phone">Enter your number:  </label>
+		    	<input type="number" id="phone" min="0">
+			</div>
+			
+			<fieldset>
+			<label for="travelclass">Choose your travel Class</label>
+			<select name="travelclass" id="travelclass">
+				<option>Economy</option>
+				<option>Premium Economy</option>
+				<option selected="selected">First Class</option>
+				<option>Business Class</option>
+			</select>
+			</fieldset><br>
+			<div>
+				<label for="travellersnumber">Number of travellers:  </label>
+		    	<input type="number" id="travellersnumber" min="0">
+			</div>
+			<br><br><br>
+			
+			<input id="button" type="Submit" value="Submit">
+				
+		</form>
+		<br>
+		<div id="dialog" title="Hot Deal!!">
+		  <p>Get 10% instant discount on domestic flights!!</p>
+		</div>
+		<button id="btn1">Open the offer!</button><br><br><br>
+		<button id="btn2">Deal of the month!</button>
+		<div class="toggler">
+		  <div id="effect" class="newClass ui-corner-all">
+			  Avail No Cost EMI* + up to 25% Instant Discount* on EMI Transactions!
+		  </div>
+		</div>
+		<div class="container">
+			<h2>Your page will expire in:</h2>
+			<h1 class='timer' data-minutes-left=5></h1>
+		</div>
+	</div>
+	</main>
+	<footer>
+	</footer>
+</body>
+</HTML>

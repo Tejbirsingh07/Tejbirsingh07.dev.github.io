@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<HTML>
+<head>
+ <script src="js/jquery-3.4.1.js"></script>
+ <script src="js/jquery-ui.js"></script>
+ <script src="js/jquery.validate.js"></script>
+ <script src="js/wow.js"></script>
+ <link rel="stylesheet" type="text/css"href="css/jquery-ui.css">
+ <link rel="stylesheet" type="text/css"href="css/styles3.css">
+ <link rel="stylesheet" type="text/css"href="css/animate.css">
+ <script>
+	$(document).ready(function(){
+		$("#gender").selectmenu();
+		$("#form").validate();
+		var availableTags = [
+		  "Australia",
+		  "Africa",
+		  "Bangladesh",
+		  "Canada",
+		  "India",
+		  "New Zealand",
+		  "Sri Lanka"
+		];
+		$( "#country" ).autocomplete({
+		  source: availableTags
+		});
+		$( "#button2" ).click(function() {
+		$( "#effect" ).removeClass( "newClass", 1000, callback );
+		});
+		function callback() {
+			setTimeout(function() {
+			$( "#effect" ).addClass( "newClass" );
+			}, 1500 );
+		}
+		new WOW().init();
+	});
+ </script>
+</head>
+<body>
+	<main>
+		<div class="main">
+			<div class="logo">
+				<img src="images/logo.png">
+			</div>
+			<ul class="unordered">
+				<li><a href="home.html">Home</a></li>
+				<li><a href="destinations.html">Destinations</a></li>
+				<li><a href="flights.html">Flight Bookings</a></li>
+				<li><a href="HotelBooking.html">Hotel Bookings</a></li>
+				<li><a href="holidatepakages.html">Holiday Packages</a></li>
+				<li><a href="cabs.html">Cab Bookings</a></li>
+				<li><a href="Travelblog.html">Travel Blog</a></li>
+				<li class="active"><a href="signup.html">Sign Up</a></li>
+				<li><a href="aboutus.html">About Us</a></li>
+			</ul>
+		</div>
+		<div class="title">
+			<h1>India Tourism</h1>
+		</div>
+		<h1><center><font color="White">Sign Up Form</font></center></h1>
+		<form>
+			<div>
+				<label for="fname">Enter First Name:</label>
+		    	<input type="text" id="fname" value="" required>
+			</div>
+			<div>
+				<label for="lname">Enter Last Name:</label>
+		    	<input type="text" id="lname" value="">
+			</div>
+			<div>
+		    	<label for="email">Enter Email:</label>
+		    	<input type="email" id="email" value="" required>
+			</div>
+			<div>
+		    	<label for="email2">Re-Enter Email:</label>
+		    	<input type="email" id="email2" value="">
+			</div>
+			<div>
+		    	<label for="password">Enter password:</label>
+		    	<input type="password" id="password" value="" required>
+			</div>
+			<div>
+				<label for="phone">Enter your phone number:  </label>
+		    	<input type="number" id="phone" min="0">
+			</div>
+			
+			<fieldset>
+			<label for="gender">Choose your Gender</label>
+			<select name="gender" id="gender">
+				<option disabled selected>Please pick one</option>
+				<option>Male</option>
+				<option>Female</option>
+				<option>Other</option>
+			</select>
+			</fieldset>
+			<br><br>
+			<div>
+				<label for="country">Enter your country name:  </label>
+		    	<input type="text" id="country">
+			</div>
+			
+			<input id="button" type="Submit" value="Sign Up">
+				
+		</form>
+		<br><br><br>
+		
+		<div class="toggler">
+		  <div id="effect" class="newClass ui-corner-all">
+			Register your account to get additional benefits.
+		  </div>
+		</div>
+		 
+		<button id="button2" class="ui-state-default ui-corner-all">Click here!</button><br><br>
+		<div class="wow rotateIn">
+			<img src="images/A1.jpg">
+		</div>
+	</main>
+	<footer>
+	</footer>
+</body>
+</HTML>

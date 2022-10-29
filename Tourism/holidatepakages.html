@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<HTML>
+<head>
+	<meta charset="UTF-8">
+	<script src="js/jquery-3.4.1.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/jquery.tabslet.js"></script>
+	<link rel="stylesheet" type="text/CSS" href="CSS/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="css/styles6.css">
+	<script>
+		$(document).ready(function(){
+			
+			$( "#currency" ).on( "change", function() {
+			$( "#spinner" ).spinner( "option", "culture", $( this ).val() );
+			});
+			$( "#spinner3" ).spinner({
+			min: 5,
+			max: 2500,
+			step: 5,
+			start: 1000,
+			numberFormat: "C"
+			});
+			$("#btn5").click(function(){
+				$("#effect").toggle( "scale", 2000 );
+			});
+			$(".tabs").tabslet();
+		});
+	</script>
+</head>
+<body>
+<header>
+	<div class="main">
+		<div class="logo">
+			<img src="images/logo.png">
+		</div>
+		<ul class="unordered">
+				<li><a href="home.html">Home</a></li>
+				<li><a href="destinations.html">Destinations</a></li>
+				<li><a href="flights.html">Flight Bookings</a></li>
+				<li><a href="HotelBooking.html">Hotel Bookings</a></li>
+				<li class="active"><a href="holidatepakages.html">Holiday Packages</a></li>
+				<li><a href="cabs.html">Cab Bookings</a></li>
+				<li><a href="Travelblog.html">Travel Blog</a></li>
+				<li><a href="signup.html">Sign Up</a></li>
+				<li><a href="aboutus.html">About Us</a></li>
+		</ul>
+	</div>
+	<div class="title">
+		<h1>India Tourism</h1>
+	</div>
+		<form>
+		<h3>Booking For Holidays</h3>
+			<p>
+			  <label for="spinner">Select Destination:</label>
+			  <input id="spinner" name="value">
+			</p><br>
+			
+			<p>
+			  <label for="spinner">Select Days:</label>
+			  <input id="spinner2" name="value">
+			</p><br>
+			
+			<p>
+			  <label for="spinner">Amount:</label>
+			  <input id="spinner3" name="spinner" value="5">
+			</p><br>
+					
+			<p>
+			  <label for="currency">Currency:</label>
+			  <select id="currency" name="currency">
+				<option value="en-US">US $</option>
+				<option value="de-DE">EUR €</option>
+				<option value="ja-JP">YEN ¥</option>
+			  </select>
+			</p><br>
+			
+			
+			<div>
+			  <input type="submit" value="Submit">
+			</div>
+		</form><br>
+		
+		<div class="hide">		
+		<button id="btn5">Trending Holiday Places</button>
+			<div id="effect">
+			<p>In India, there are various famous places where many people wants to go and spend their holidays.</p>
+				<ol>
+					<li>Massoorie</li>
+					<li>Rishikesh</li>
+					<li>Dalhousie</li>
+					<li>Bangalore</li>
+					<li>Goa</li>
+				</ol>
+			</div>
+		</div>
+		<br><br><br><br>
+            <div class='tabs'>
+              <ul class='horizontal'>
+                <li><a href="#tab-1">This is data 1.</a></li>
+                <li><a href="#tab-2">This is data 2.</a></li>
+                <li><a href="#tab-3">This is data 3.</a></li>
+              </ul>
+              <div id='tab-1'><span>This is the default tab functionality.</span></div>
+              <div id='tab-2'><span>Tab 2</span></div>
+              <div id='tab-3'><span>Tab 3</span></div>
+            </div>
+				
+</header>
+</body>
+</HTML>
